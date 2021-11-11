@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter, Route, Switch, NavLink } from "react-router-dom";
+import { BrowserRouter, Route, Switch, NavLink, Redirect } from "react-router-dom";
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -32,10 +32,17 @@ function App() {
           <Route path='/articles/:id'>
             <Article />
           </Route>
+          {/* 애매한 주소로 들어온 경우, 이를 전반적으로 만져주는(?) 처리 
+          암기!! Route-path, Link & NavLink & Redirect-to */}
+          {/* todo : 여기서는 setTimeout을 어떻게 쓰지? */}
+          <Route path='*'>
+            <Redirect path='/' />
+          </Route>
+
         </Switch>
 
       </BrowserRouter>
-    </div>
+    </div >
   );
 }
 
