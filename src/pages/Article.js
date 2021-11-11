@@ -20,7 +20,8 @@ export default function Article() {
                 history.push('/')
             }, 2000)
         }
-    }, [error])
+    }, [error, history])
+    // 구조상 여기에 history를 넣어도 소용이 없을 것 같은데, 콘솔에서 넣어줘야 한단다. 왜???
 
     return (
         <>

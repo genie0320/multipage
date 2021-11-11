@@ -36,7 +36,7 @@ function App() {
           암기!! Route-path, Link & NavLink & Redirect-to */}
           {/* todo : 여기서는 setTimeout을 어떻게 쓰지? */}
           <Route path='*'>
-            <Redirect path='/' />
+            <Redirect to='/' />
           </Route>
 
         </Switch>
